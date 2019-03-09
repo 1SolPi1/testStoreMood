@@ -1,0 +1,71 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addBox{
+            width: 50%;
+    border: 1px solid black;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addBox label{
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.addBox input{
+    display: none;
+}
+
+.listBox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.listItem{
+    width: 100px;
+    height: 100px;
+    margin: 0 2px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.listItem img{
+    width: 100%;
+    height: 100%;
+}
+
+.otherFiles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.otherFileType{
+    font-family: Helvetica, serif;
+    font-size: 30px;
+    color: black;
+}
+
+.dragFile{
+    background: black;
+}
+
+
+
+
+
+
+

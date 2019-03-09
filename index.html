@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div id="root">
+		<div class="addBox" ref="fileform">
+		<label for="AddFile">Выберите файл </label>
+		<p>или перетащите в это поле</p>
+    			<input type='file' @change="loadFiles" id="AddFile">
+		</div>
+		
+		<div class="listBox" v-if="filesData.length > 0">
+			<div 
+			v-for="item in filesData"
+			style="text-align: center;" 
+			>
+				<div class="listItem">
+				<img :src="item.image" v-if="item.image !== null">
+				<span class="otherFileType" v-else> {{item.type}}</span>
+				</div>
+				<span class="otherFileSize">{{item.size}} МБ</span>		
+			</div>
+		</div>
+		
+	</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
